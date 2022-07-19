@@ -138,6 +138,7 @@ class PdfView
 
         // remove this on production
         $pdf->showImageErrors = true;
+        $pdf->debug = true;
 
         $pdf->SetMargins($leftMargin, $rightMargin, $topMargin);
 
