@@ -136,6 +136,9 @@ class PdfView
             'fontDir' => ExtensionManagementUtility::extPath('web2pdf') . 'Resources/Public/Fonts',
         ]);
 
+        // remove this on production
+        $pdf->showImageErrors = true;
+
         $pdf->SetMargins($leftMargin, $rightMargin, $topMargin);
 
         if ($styleSheet === 'print' || $styleSheet === 'screen') {
